@@ -32,27 +32,21 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Welcome Message", name: "welcome", widget: "text" }
           - { label: "Book Description", name: "bookDescription", widget: "text" }
-          - { 
-              label: "Book Reviews", 
-              name: 'bookReviews', 
-              widget: "list", 
-              collapsed: true, 
-              summary: "{{fields.name}}",
-              fields:
-                - { label: "Name", name: "name", widget: 'string', default: "John Doe" }
-                - { label: "Review", name: "review", widget: 'text', default: "This is a book review about Light in the Darkness" }
-            }
-          - { 
-              label: "Instagram Posts", 
-              name: 'instagram', 
-              widget: "list", 
-              collapsed: true, 
-              summary: '{{fields.image}}',
-              fields:
-                - { label: "Image", name: "image", widget: image }
-
-          }
-         
+          - label: "Book Reviews" 
+            name: 'bookReviews' 
+            widget: "list" 
+            collapsed: true 
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: "name", widget: 'string', default: "John Doe" }
+              - { label: "Review", name: "review", widget: 'text', default: "This is a book review about Light in the Darkness" }
+          - label: "Instagram Posts" 
+            name: 'instagram' 
+            widget: "list" 
+            collapsed: true 
+            summary: '{{fields.image}}'
+            fields:
+              - { label: "Image", name: "image", widget: image }
       - file: "content/about/index.md"
         label: "About"
         name: "about"
