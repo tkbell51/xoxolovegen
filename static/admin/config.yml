@@ -37,12 +37,11 @@ collections:
               name: 'bookReviews', 
               widget: "list", 
               collapsed: true, 
-              summary: '{{fields.name}}',
+              summary: "{{fields.name}}",
               fields:
-              - {label: "Reviewer", name: "reviewer", widget: string, default: "John Doe"}
-              - {label: "Review", name: "review", widget: text, default: "This is a book review about Light in the Darkness"}
-
-          }
+              - { label: "Name", name: "name", widget: string, default: "John Doe" }
+              - { label: "Review", name: "review", widget: text, default: "This is a book review about Light in the Darkness" }
+            }
           - { 
               label: "Instagram Posts", 
               name: 'instagram', 
