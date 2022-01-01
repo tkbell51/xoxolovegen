@@ -29,6 +29,9 @@ bookReviews:
   - name: Amber W.
     review: Powerful. You can feel the emotions of the writer throughout the pages
       of her work.
+  - name: Books and Associates
+    review: "A collection of thought provoking poems and verses that will resonate
+      with everyone sentimentally. "
 instagram:
   - image: /instagram/inst1.jpeg
   - image: /instagram/inst2.jpeg
