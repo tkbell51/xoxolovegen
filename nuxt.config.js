@@ -1,5 +1,8 @@
 import getRoutes from './utils/getRoutes'
 export default {
+    env: {
+        baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    },
     // Target: https://go.nuxtjs.dev/config-target
     target: 'static',
 
@@ -66,18 +69,7 @@ export default {
     },
     // Content module configuration: https://go.nuxtjs.dev/config-content
     content: {},
-    sitemap: {
-        hostname: process.env.BASE_URL,
-        gzip: true,
-        routes() {
-            return getRoutes()
-        },
-    },
-    generate: {
-        routes() {
-            return getRoutes()
-        },
-    },
+
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {},
 }
