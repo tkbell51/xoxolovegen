@@ -2,18 +2,19 @@ backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
 
+local_backend: true
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'post'
-    label: 'Post'
-    folder: 'content/post'
-    media_folder: ""
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    media_folder: "/static/img/blog"
     public_folder: ""
     format: 'frontmatter'
     create: true
-    slug: '{{slug}}/index'
+    slug: '{{slug}}'
     # editor:
       # preview: false
     fields:
@@ -22,10 +23,26 @@ collections:
       - { label: 'Featured Image', name: 'image', widget: 'image' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'global'
+    label: 'Global'
+    files: 
+      - file: "content/footer.md"
+        label: "Footer"
+        name: "footer"
+        fields:
+          - { label: "Footer Text", name: 'footerText', widget: 'string'}
+          - { label: "Footer Form Text", name: 'formText', widget: 'string'}
+          - label: "Instagram Posts" 
+            name: 'instagram'
+            widget: "list" 
+            collapsed: true 
+            summary: '{{fields.image}}'
+            fields:
+              - { label: "Image", name: "image", widget: image,  media_folder: '/static/img/instagram' , allow_multiple: true}
   - name: 'pages'
     label: 'Pages'
     files:
-      - file: "content/_index.md"
+      - file: "content/pages/home.md"
         label: 'Home Page'
         name: "home"
         fields:
@@ -40,14 +57,8 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: 'string', default: "John Doe" }
               - { label: "Review", name: "review", widget: 'text', default: "This is a book review about Light in the Darkness" }
-          - label: "Instagram Posts" 
-            name: 'instagram' 
-            widget: "list" 
-            collapsed: true 
-            summary: '{{fields.image}}'
-            fields:
-              - { label: "Image", name: "image", widget: image }
-      - file: "content/about/index.md"
+          
+      - file: "content/pages/about.md"
         label: "About"
         name: "about"
         fields:

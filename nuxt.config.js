@@ -18,10 +18,10 @@ export default {
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
-    css: [],
+    css: ['~/assets/css/main.css'],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-    plugins: [],
+    plugins: ['~plugins/vue-awesome-swiper', '~plugins/date'],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
@@ -32,15 +32,37 @@ export default {
         '@nuxtjs/eslint-module',
         // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
-        '@nuxt/image',
+        '@nuxtjs/style-resources',
+        '@nuxtjs/google-fonts',
+        '@nuxtjs/fontawesome',
     ],
-
+    googleFonts: {
+        families: {
+            Parisienne: true,
+            Simonetta: true,
+        },
+    },
+    styleResources: {
+        scss: [
+            '~/assets/scss/variables.scss',
+            '~/assets/scss/breakpoints.scss',
+            '~/assets/scss/mixins.scss',
+            '~/assets/scss/typography.scss',
+        ],
+    },
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
         // https://go.nuxtjs.dev/content
         '@nuxt/content',
+        '@nuxt/image',
+        '@nuxtjs/sitemap',
     ],
-
+    fontawesome: {
+        icons: {
+            solid: ['faEnvelope', 'faMapMarkerAlt', 'faCaretDown', 'faArrowRight', 'faInfo', 'faCheck', 'faTimes'],
+            brands: ['faDev', 'faFacebook', 'faTwitter', 'faLinkedin', 'faInstagram'],
+        },
+    },
     // Content module configuration: https://go.nuxtjs.dev/config-content
     content: {},
 

@@ -1,0 +1,33 @@
+$bg-color: #F9F0E8;
+$black: #1a1918;
+
+$primary-color: #BA0236;
+$primary-light: lighten($primary-color, 10%);
+$primary-very-light: lighten($primary-color, 30%);
+$primary-dark: darken($primary-color, 20%);
+
+$secondary-color: #B56933;
+$secondary-light: lighten($secondary-color, 10%);
+$secondary-very-light: lighten($secondary-color, 30%);
+$secondary-dark: darken($secondary-color, 10%);
+
+
+$white: #fff;
+$black: #1a1918;
+$light-black: #424242;
+$grey: #dbdbdb;
+
+$font-color: $black;
+$font-size: 1.6rem;
+
+$hero-gradient: radial-gradient(
+  circle farthest-side at 80% 100%,
+  rgba($black, 0.4),
+  rgba($black, 0.4)
+);
+
+$transition: all 0.4s;
+
+$header-font-color: $white;
+
+$box-shadow: 0 1px 2px rgba($primary-color, 80%);
