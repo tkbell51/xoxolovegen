@@ -1,4 +1,3 @@
-import getRoutes from './utils/getRoutes'
 export default {
     env: {
         baseUrl: process.env.BASE_URL || 'http://localhost:3000',
@@ -59,7 +58,6 @@ export default {
         // https://go.nuxtjs.dev/content
         '@nuxt/content',
         '@nuxt/image',
-        '@nuxtjs/sitemap',
     ],
     fontawesome: {
         icons: {
