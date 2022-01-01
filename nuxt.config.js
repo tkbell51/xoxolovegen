@@ -65,7 +65,25 @@ export default {
     },
     // Content module configuration: https://go.nuxtjs.dev/config-content
     content: {},
+    sitemap: {
+        hostname: 'https://xoxolovegen-setup.netlify.app/',
+        gzip: true,
+        routes: async () => {
+            const { $content } = require('@nuxt/content')
 
+            const projects = await $content('portfolio').only(['path']).fetch()
+
+            return projects.map((p) => p.path)
+        },
+    },
+    generate: {
+        async routes() {
+            const { $content } = require('@nuxt/content')
+            const files = await $content({ deep: true }).only(['path']).fetch()
+
+            return files.map((file) => (file.path === '/index' ? '/' : file.path))
+        },
+    },
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {},
 }
