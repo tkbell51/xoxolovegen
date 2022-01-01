@@ -1,3 +1,4 @@
+import getRoutes from './utils/getRoutes'
 export default {
     // Target: https://go.nuxtjs.dev/config-target
     target: 'static',
@@ -66,14 +67,10 @@ export default {
     // Content module configuration: https://go.nuxtjs.dev/config-content
     content: {},
     sitemap: {
-        hostname: 'https://xoxolovegen-setup.netlify.app/',
+        hostname: process.env.BASE_URL,
         gzip: true,
-        routes: async () => {
-            const { $content } = require('@nuxt/content')
-
-            const projects = await $content('portfolio').only(['path']).fetch()
-
-            return projects.map((p) => p.path)
+        routes() {
+            return getRoutes()
         },
     },
     generate: {
