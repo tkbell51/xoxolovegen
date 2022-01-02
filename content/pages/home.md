@@ -1,5 +1,5 @@
 ---
-title: Home Page
+title: My Words, My Heart, In My Way
 welcome: |-
   Great, you’re here.
   Welcome, why don’t you stay a while and check out our site.
