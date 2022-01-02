@@ -1,6 +1,8 @@
 ---
 title: Home Page
-welcome: This is my welcome message for xoxolovegen website
+welcome: |-
+  Great, you’re here.
+  Welcome, why don’t you stay a while and check out our site.
 bookDescription: Light in the Darkness takes you deep into the mind and spirit
   of the author with this non-traditional poetic and prose collection. It
   provides readers with an accurate and realistic depiction of pain and
