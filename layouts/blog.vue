@@ -2,8 +2,8 @@
     <div class="page">
         <div class="overlay"></div>
         <Header class="blog" />
-        <nuxt class="main-content" />
-        <Footer />
+        <nuxt class="content" />
+        <!-- <Footer /> -->
     </div>
 </template>
 
