@@ -39,4 +39,7 @@ instagram:
   - image: /instagram/inst2.jpeg
   - image: /instagram/inst3.jpeg
   - image: /instagram/inst4.jpeg
+bioShort: This is the text for the bio short. This is the text for the bio
+  short. This is the text for the bio short. This is the text for the bio short.
+  This is the text for the bio short. This is the text for the bio short.
 ---

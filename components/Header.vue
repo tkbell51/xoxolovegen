@@ -1,16 +1,38 @@
 <template>
     <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <NuxtLink to="/"><SmallLogo class="header-logo" /></NuxtLink>
-                <NavLinks />
-            </nav>
-        </div>
+        <nav class="nav">
+            <NavLinks />
+            <SmallLogo class="mobile-logo" />
+            <NavLinksMobile :show-nav="showNav" />
+            <div class="nav__mobile" @click="toggleMenu">
+                <span></span>
+            </div>
+        </nav>
     </header>
 </template>
 
 <script>
-export default {}
+export default {
+    data() {
+        return {
+            showNav: false,
+        }
+    },
+    methods: {
+        toggleMenu() {
+            this.showNav = !this.showNav
+            const navMobile = document.querySelector('.nav__mobile')
+            const overlay = document.querySelector('.overlay')
+            const body = document.querySelector('body')
+            // const hamMenu = document.querySelector('.nav__menu')
+            // hamMenu.classList.toggle('show')
+            overlay.classList.toggle('show')
+            navMobile.classList.toggle('clicked')
+            body.classList.toggle('overflow')
+            // event.stopPropagation()
+        },
+    },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -20,32 +42,19 @@ export default {}
     position: absolute;
     width: 100%;
     z-index: 100;
+
     .nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 100%;
-        background: transparent;
-        @include respond(tab-port) {
-            width: 100%;
-            padding: 0 2rem;
-        }
+        width: 100%;
+        padding: 0 3rem;
+    }
 
-        .header-logo {
-            height: 10rem;
-            @include respond(tab-port) {
-                height: 8rem;
-            }
-            &.desktop {
-                @include respond(tab-port) {
-                    display: none;
-                }
-            }
-            &.mobile {
-                @media only screen and(min-width: 56.25em) {
-                    display: none;
-                }
-            }
+    .mobile-logo {
+        display: none;
+        @include respond(tab-port) {
+            display: block;
         }
     }
 

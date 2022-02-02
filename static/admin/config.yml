@@ -22,7 +22,23 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Featured Image', name: 'image', widget: 'image' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Instagram Link', name: 'igLink', widget: 'string' ,default:''}
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'books'
+    label: 'Books'
+    folder: 'content/books'
+    media_folder: "/static/img/books"
+    public_folder: ""
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    # editor:
+      # preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Book Image', name: 'image', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'string' }
   - name: 'global'
     label: 'Global'
     files: 
@@ -48,6 +64,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Welcome Message", name: "welcome", widget: "text" }
+          - { label: "Bio Short", name: "bioShort", widget: "text", default: 'This is text for the bio short. This is text for the bio short. This is text for the bio short. This is text for the bio short. '  }
           - { label: "Book Description", name: "bookDescription", widget: "text" }
           - label: "Book Reviews" 
             name: 'bookReviews' 
@@ -63,4 +80,9 @@ collections:
         name: "about"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "text" }
+          - { label: "About Full", name: "aboutFull", widget: "text" }
+      - file: "content/pages/contact.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - { label: "Contact Message", name: "message", widget: "text" }

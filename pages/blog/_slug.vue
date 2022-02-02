@@ -63,6 +63,12 @@
                     </div>
                 </div>
             </div>
+            <section>
+                <div class="container">
+                    <p>Want to discuss or leave a comment? Let's talk on instagram.</p>
+                    <a :href="post.igLink" target="_blank"><Fab i="instagram" /></a>
+                </div>
+            </section>
         </div>
     </article>
 </template>
@@ -77,10 +83,44 @@ export default {
             post,
         }
     },
+    head() {
+        return {
+            title: this.post.title,
+            meta: [
+                // Open Graph
+                { hid: 'og:title', property: 'og:title', content: this.post.title },
+                { hid: 'og:type', property: 'og:type', content: 'article' },
+                {
+                    hid: 'og:image',
+                    property: 'og:image',
+                    content: `https://my-site.com/${this.post.image}`,
+                },
+                // Twitter Card
+                {
+                    hid: 'twitter:title',
+                    name: 'twitter:title',
+                    content: this.post.title,
+                },
+                {
+                    hid: 'twitter:card',
+                    name: 'twitter:card',
+                    content: 'summary_large_image',
+                },
+                {
+                    hid: 'twitter:image',
+                    name: 'twitter:image',
+                    content: `https://my-site.com/${this.post.image}`,
+                },
+            ],
+        }
+    },
 }
 </script>
 
 <style lang="scss" scoped>
+article {
+    margin-top: 10rem;
+}
 .post {
     &__top {
         margin-bottom: 2rem;

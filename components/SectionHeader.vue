@@ -27,11 +27,14 @@ export default {
     position: relative;
     .text-background {
         color: rgba($secondary-color, 0.2);
-        font-size: 25rem;
+        font-size: clamp(6rem, 15vw, 25rem);
         text-align: center;
         white-space: nowrap;
         z-index: -1;
         font-family: 'Parisienne';
+        /* @include respond(tab-small) {
+            display: none;
+        } */
     }
     .heading-secondary {
         @include absCenter;
