@@ -118,9 +118,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-article {
-    margin-top: 10rem;
-}
 .post {
     &__top {
         margin-bottom: 2rem;

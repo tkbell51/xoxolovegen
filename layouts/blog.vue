@@ -13,6 +13,7 @@
 .blog {
     position: relative;
     background: $primary-color;
+    padding: 2rem 0;
     a {
         color: $primary-color;
     }

@@ -40,6 +40,7 @@ body {
 .page {
     display: grid;
     grid-template-areas:
+        'header'
         'content'
         'footer';
     grid-template-rows: 1fr auto;
@@ -47,7 +48,7 @@ body {
     height: 100vh;
 
     .header {
-        grid-area: content;
+        grid-area: header;
     }
     .footer {
         grid-area: footer;
