@@ -39,6 +39,7 @@ export default {}
 
 .marquee p {
     display: inline-block;
+    font-size: map-get($font-size-scale, '600');
 }
 
 @keyframes marquee {

@@ -7,9 +7,10 @@
                     <h1 class="heading-primary text-center">My Heart.</h1>
                     <h1 class="heading-primary text-right">In My Way.</h1>
                 </div>
-                <div class="hero__content--img">
+                <div class="hero__content--profile">
                     <nuxt-img width="600" src="/img/welcome-img.jpeg" alt="Gee Gee Louis headshot" />
                 </div>
+                <p class="hero__content--welcome">{{ text }}</p>
             </div>
         </div>
         <PieceTicker />
@@ -35,10 +36,17 @@ export default {
         &--text {
             position: relative;
             z-index: 100;
+            padding-top: 5rem;
+            color: $white;
         }
-        &--img {
+        &--profile {
             @include absCenter;
-            left: 65%;
+            left: 60%;
+        }
+        &--welcome {
+            color: $secondary-very-light;
+            width: 30%;
+            font-size: map-get($font-size-scale, '600');
         }
     }
 

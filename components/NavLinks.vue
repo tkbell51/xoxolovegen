@@ -34,8 +34,7 @@ export default {
     &-menu {
         display: flex;
         align-items: center;
-        height: 100%;
-        width: 100%;
+
         background: transparent;
         @include respond(tab-port) {
             width: 100%;

@@ -1,6 +1,6 @@
 <template>
     <main>
-        <Hero :text="home.title" />
+        <Hero :text="home.welcome" />
         <!-- <section class="welcome">
             <div class="container">
                 <div class="welcome__text text-center lg:w-1/2 mx-auto">

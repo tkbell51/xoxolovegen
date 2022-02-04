@@ -4,6 +4,7 @@
             <NuxtLink to="/"> <LargeLogo class="header-logo" color="white" /> </NuxtLink>
 
             <NavLinks />
+            <SocialLinks />
             <SmallLogo class="mobile-logo" />
             <NavLinksMobile :show-nav="showNav" />
             <div class="nav__mobile" @click="toggleMenu">
