@@ -1,14 +1,6 @@
 <template>
     <ul class="nav-menu">
-        <li v-for="(item, index) in navLinks.slice(0, 2)" :key="index" class="nav-menu__item">
-            <NuxtLink class="nav-menu__link nav-menu__link--ltr" :to="item.link">
-                {{ item.title }}
-            </NuxtLink>
-        </li>
-        <li>
-            <NuxtLink to="/"> <LargeLogo class="header-logo" color="white" /> </NuxtLink>
-        </li>
-        <li v-for="(item, index) in navLinks.slice(navLinks.length - 2)" :key="index" class="nav-menu__item">
+        <li v-for="(item, index) in navLinks" :key="index" class="nav-menu__item">
             <NuxtLink class="nav-menu__link nav-menu__link--ltr" :to="item.link">
                 {{ item.title }}
             </NuxtLink>
@@ -39,26 +31,8 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
-    .header-logo {
-        height: 10rem;
-        @include respond(tab-port) {
-            height: 8rem;
-        }
-        &.desktop {
-            @include respond(tab-port) {
-                display: none;
-            }
-        }
-        &.mobile {
-            @media only screen and(min-width: 56.25em) {
-                display: none;
-            }
-        }
-    }
-
     &-menu {
         display: flex;
-        justify-content: space-around;
         align-items: center;
         height: 100%;
         width: 100%;
@@ -71,7 +45,7 @@ export default {
             align-self: center;
         }
         &__link {
-            font-size: $font-size;
+            @apply text-base;
             display: inline-block;
             text-transform: uppercase;
             opacity: 0.8;

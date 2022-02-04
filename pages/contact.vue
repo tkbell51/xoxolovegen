@@ -61,7 +61,7 @@ export default {
 <style lang="scss" scoped>
 .form {
     background: $primary-color;
-    font-size: $font-size;
+    @apply text-base;
     &__group {
         @apply flex flex-col;
     }

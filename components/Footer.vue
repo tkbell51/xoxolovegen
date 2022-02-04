@@ -74,30 +74,20 @@
         <div class="footer__main py-8">
             <div class="container">
                 <div class="footer__text flex justify-center md:justify-between items-center my-8">
-                    <div class="footer__links hidden md:block">
-                        <ul class="">
-                            <li v-for="link in footerLinks.slice(0, 3)" :key="link.title">
-                                <NuxtLink :to="link.link">{{ link.title }}</NuxtLink>
-                            </li>
-                        </ul>
-                    </div>
                     <div class="mx-auto">
                         <LargeLogo :color="logoColor" class="footer__logo mb-8" />
+                        <div class="footer__links hidden md:block">
+                            <ul class="flex justify-around items-center mb-8">
+                                <li v-for="link in footerLinks" :key="link.title">
+                                    <NuxtLink :to="link.link">{{ link.title }}</NuxtLink>
+                                </li>
+                            </ul>
+                        </div>
                         <div class="social-links flex items-center justify-center gap-8">
                             <a v-for="(social, index) in socialLinks" :key="index" :href="social.link" target="_blank">
                                 <Fab :i="social.icon" />
                             </a>
                         </div>
-                    </div>
-                    <div class="footer__links hidden md:block">
-                        <ul class="">
-                            <li
-                                v-for="link in footerLinks.slice(Math.max(footerLinks.length - 3, 0))"
-                                :key="link.title"
-                            >
-                                <NuxtLink :to="link.link">{{ link.title }}</NuxtLink>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -128,12 +118,7 @@ export default {
                 },
                 { title: 'About', link: '/about' },
 
-                {
-                    title: 'Projects',
-                    link: '/projects',
-                },
                 { title: 'Blog', link: '/blog' },
-                { title: 'Shop', link: '/shop' },
                 { title: 'Contact', link: '/contact' },
 
                 // { title: "Blog", link: "/blog", external: false },
@@ -192,7 +177,7 @@ export default {
     .form {
         @apply mx-auto;
 
-        font-size: $font-size;
+        @apply text-base;
         &__group {
             border-bottom: 1px solid $white;
             display: flex;

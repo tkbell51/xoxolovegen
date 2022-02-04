@@ -101,7 +101,7 @@ export default {
         &:link,
         &:visited {
             text-decoration: none;
-            font-size: $font-size;
+            @apply text-base;
             color: $white;
             display: block;
             text-align: left;

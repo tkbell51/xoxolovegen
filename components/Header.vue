@@ -1,6 +1,8 @@
 <template>
     <header class="header">
         <nav class="nav">
+            <NuxtLink to="/"> <LargeLogo class="header-logo" color="white" /> </NuxtLink>
+
             <NavLinks />
             <SmallLogo class="mobile-logo" />
             <NavLinksMobile :show-nav="showNav" />
@@ -37,11 +39,11 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-    padding: 2rem 3rem 0;
-    background: transparent;
-    position: absolute;
+    padding: 2rem 3rem;
+    background: $black;
+    position: relative;
     width: 100%;
-    z-index: 100;
+    z-index: 200;
 
     .nav {
         display: flex;
@@ -49,6 +51,22 @@ export default {
         align-items: center;
         width: 100%;
         padding: 0 3rem;
+        .header-logo {
+            height: 7rem;
+            @include respond(tab-port) {
+                height: 5rem;
+            }
+            &.desktop {
+                @include respond(tab-port) {
+                    display: none;
+                }
+            }
+            &.mobile {
+                @media only screen and(min-width: 56.25em) {
+                    display: none;
+                }
+            }
+        }
     }
 
     .mobile-logo {

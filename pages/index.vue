@@ -1,7 +1,7 @@
 <template>
     <main>
         <Hero :text="home.title" />
-        <section class="welcome">
+        <!-- <section class="welcome">
             <div class="container">
                 <div class="welcome__text text-center lg:w-1/2 mx-auto">
                     <p class="text-5xl text-white">
@@ -13,7 +13,7 @@
                     <NuxtLink to="/speaker"></NuxtLink>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section class="about">
             <div class="container">
                 <div class="about__content flex justify-between">

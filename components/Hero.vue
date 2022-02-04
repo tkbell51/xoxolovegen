@@ -1,11 +1,19 @@
 <template>
-    <section class="hero">
+    <div class="hero">
         <div class="container h-full">
-            <div class="hero__content flex items-center">
-                <h1 class="heading-primary text-center">{{ text }}</h1>
+            <div class="hero__content">
+                <div class="hero__content--text">
+                    <h1 class="heading-primary">My Words.</h1>
+                    <h1 class="heading-primary text-center">My Heart.</h1>
+                    <h1 class="heading-primary text-right">In My Way.</h1>
+                </div>
+                <div class="hero__content--img">
+                    <nuxt-img width="600" src="/img/welcome-img.jpeg" alt="Gee Gee Louis headshot" />
+                </div>
             </div>
         </div>
-    </section>
+        <PieceTicker />
+    </div>
 </template>
 
 <script>
@@ -16,12 +24,22 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
-    background: $hero-gradient, center / cover no-repeat url('../static/img/hero-bg.jpeg');
-    height: 75vh;
-    width: 100%;
+    background: $black;
+    height: 50rem;
+    /* width: 100%; */
+    position: relative;
     &__content {
         height: 100%;
         width: 100%;
+
+        &--text {
+            position: relative;
+            z-index: 100;
+        }
+        &--img {
+            @include absCenter;
+            left: 65%;
+        }
     }
 
     @include respond(tab-port) {

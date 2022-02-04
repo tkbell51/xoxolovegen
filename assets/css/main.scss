@@ -1,0 +1,123 @@
+
+body {
+    position: relative;
+    // background: $bg-color;
+}
+.page {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'content'
+        'footer';
+    grid-template-rows: 1fr auto;
+    // grid-gap: 10px;
+    height: 100vh;
+
+    .header {
+        grid-area: header;
+    }
+    .footer {
+        grid-area: footer;
+    }
+    .content {
+        grid-area: content;
+        @include respond(tab-port) {
+            margin-top: 5rem;
+        }
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: rgba($black, 0.8);
+        opacity: 0;
+        visibility: hidden;
+        &.show {
+            opacity: 0.8;
+            visibility: visible;
+        }
+    }
+}
+::selection {
+    background-color: $primary-color !important;
+    color: $white;
+}
+.container {
+    @apply mx-auto;
+    @include respond(phone) {
+        padding: 0 3rem;
+    }
+}
+
+.heading-primary {
+    color: $white;
+    display: block;
+    text-transform: uppercase;
+   
+}
+.heading-secondary {
+    color: $primary-color;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+.heading-tertiary {
+    @apply uppercase;
+}
+
+.btn {
+    @apply text-white font-bold;
+    background: $primary-color;
+    font-size: $font-size;
+    border-radius: 3px;
+    margin: 2rem 0;
+    display: inline-block;
+    text-align: center;
+
+    // background: darken($secondary-color, 5%);
+    // box-shadow: $box-shadow;
+    border: 1px solid $primary-color;
+
+    padding: 1rem 3rem;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    will-change: transform;
+    &:hover {
+        background: darken($primary-color, 10%);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.2);
+        transform: translate3d(0, -2px, 0);
+    }
+    &:active {
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+        transform: translate3d(0, 1px, 0);
+    }
+    &.btn-transparent {
+        background: transparent;
+        border: 1px solid $white;
+        &:hover {
+            background: darken($primary-color, 5%);
+            border: 1px solid darken($primary-color, 5%);
+        }
+    }
+
+    @include respond(tab-port) {
+        height: 35;
+    }
+}
+
+section {
+    position: relative;
+    padding: 8rem 0;
+    @include respond(phone) {
+        padding: 3rem 0;
+    }
+}
+
