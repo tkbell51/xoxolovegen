@@ -2,7 +2,7 @@
 title: My Words, My Heart, In My Way
 welcome: |-
   Great, you’re here!
-  Welcome, why don’t you stay a while and check out our site?
+  Welcome, why don’t you stay awhile and check out our site?
 bookDescription: Light Up the Darkness takes you deep into the mind and spirit
   of the author with this non-traditional poetic and prose collection. It
   provides readers with an accurate and realistic depiction of pain and
