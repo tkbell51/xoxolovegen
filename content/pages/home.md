@@ -1,9 +1,9 @@
 ---
 title: My Words, My Heart, In My Way
 welcome: |-
-  Great, you’re here.
+  Great, you’re here!
   Welcome, why don’t you stay a while and check out our site.
-bookDescription: Light in the Darkness takes you deep into the mind and spirit
+bookDescription: Light Up the Darkness takes you deep into the mind and spirit
   of the author with this non-traditional poetic and prose collection. It
   provides readers with an accurate and realistic depiction of pain and
   pleasure, of violence and tranquility, and of emotional connections to even
@@ -39,7 +39,8 @@ instagram:
   - image: /instagram/inst2.jpeg
   - image: /instagram/inst3.jpeg
   - image: /instagram/inst4.jpeg
-bioShort: This is the text for the bio short. This is the text for the bio
-  short. This is the text for the bio short. This is the text for the bio short.
-  This is the text for the bio short. This is the text for the bio short.
+bioShort: I'm Gen, a writer/author and creative.  I have been writing since I
+  was young and in the last several years decided to make it my focus. This is
+  my creative space dedicated to networking and sharing not only my work but my
+  knowledge of the industry. Enjoy!
 ---
